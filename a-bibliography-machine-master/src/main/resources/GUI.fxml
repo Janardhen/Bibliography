@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="601.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.bsu.cs222.Controller">
+   <children>
+      <GridPane prefHeight="601.0" prefWidth="600.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="335.0" minHeight="10.0" prefHeight="198.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="446.0" minHeight="10.0" prefHeight="403.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <GridPane style="-fx-padding: 2px;">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <TextField fx:id="inputPublisherLocation" promptText="Publisher Location:" GridPane.rowIndex="3" />
+                  <TextField fx:id="inputAuthor" promptText="Author:" />
+                  <TextField fx:id="inputPublisher" promptText="Publisher:" GridPane.rowIndex="2" />
+                  <TextField fx:id="inputPublicationDate" promptText="Publication Date:" GridPane.rowIndex="4" />
+                  <TextField fx:id="inputDateAccessed" promptText="Date Accessed:" GridPane.rowIndex="5" />
+                  <TextField fx:id="inputURLBOTTOM" promptText="URL:" GridPane.rowIndex="6" />
+                  <RadioButton fx:id="MLAButton" mnemonicParsing="false" selected="false" text="MLA" translateX="55.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="Format" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="APAButton" mnemonicParsing="false" selected="false" text="APA" toggleGroup="$Format" translateX="120.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <RadioButton fx:id="ChicagoButton" mnemonicParsing="false" selected="false" text="Chicago" toggleGroup="$Format" translateX="175.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Label text="Format" translateX="125.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Button fx:id="submitButton" mnemonicParsing="false" onAction="#addTextArea" text="Submit" translateX="117.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                  <TextField fx:id="inputArticleName" promptText="Article Name:" GridPane.rowIndex="1" />
+               </children>
+            </GridPane>
+            <TitledPane alignment="CENTER" animated="false" collapsible="false" prefHeight="409.0" prefWidth="600.0" text="Works Cited" GridPane.rowIndex="1">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ScrollPane layoutX="-1.0" prefHeight="378.0" prefWidth="600.0">
+                           <content>
+                              <TextArea fx:id="outputText" prefHeight="379.0" prefWidth="585.0" />
+                           </content></ScrollPane>
+                     </children></AnchorPane>
+              </content>
+            </TitledPane>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
